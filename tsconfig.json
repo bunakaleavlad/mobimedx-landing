@@ -1,6 +1,0 @@
-{
-  "name": "MobiMedx Landing",
-  "description": "Професійна інфузійна терапія на дому — комплексна детоксикація, відновлення та оздоровлення.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
