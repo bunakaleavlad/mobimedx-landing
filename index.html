@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Професійна підтримка здоров'я з виїздом додому | MobiMedx</title>
-    <meta name="description" content="Професійна підтримка самопочуття з виїздом додому. Відновлення енергії, вітамінна підтримка, зміцнення імунітету. Цілодобово, конфіденційно, професійно." />
+    <title>Зняття нудоти та тремору після вечірок з виїздом додому | MobiMedx</title>
+    <meta name="description" content="Швидке зняття нудоти, тремору та дискомфорту після веселих заходів. Допомога вдома. Повернення енергії, ясності та гарного самопочуття. Анонімно, цілодобово." />
     <style>
         /* ============================================================
            ІНСТРУКЦІЯ ДЛЯ НАЛАШТУВАННЯ
@@ -24,11 +24,10 @@
               - Токен: AAHZy2qsU9XD-4Wtsq5tN-phJvJ_So4VnvM
               - Chat ID: (ваш особистий, отримайте через @userinfobot)
               - Вставте ваш CHAT_ID у змінну нижче
-           4. ФОТО: замініть https://picsum.photos/ на свої зображення
-           5. ЦІНИ: знайдіть 2500, 3500, 4500, 1800, 3000, 1500 і змініть
+           4. ФОТО: замініть на свої зображення
+           5. ЦІНИ: знайдіть 2500, 1800, 3000, 1500 і змініть
            ============================================================ */
 
-        /* ====== БАЗОВІ СТИЛІ ====== */
         * {
             margin: 0;
             padding: 0;
@@ -53,7 +52,6 @@
             padding: 0 20px;
         }
 
-        /* ====== КНОПКИ ====== */
         .btn {
             display: inline-block;
             padding: 16px 40px;
@@ -125,7 +123,6 @@
             color: #5b84d0;
         }
 
-        /* ====== ШАПКА ====== */
         .header {
             position: fixed;
             top: 0;
@@ -173,7 +170,6 @@
                 font-size: 0.85rem;
             }
         }
-
 
         .logo {
             font-size: 1.4rem;
@@ -247,7 +243,6 @@
             display: none;
         }
 
-        /* ====== HERO ====== */
         .hero {
             padding: 140px 0 80px;
             background: linear-gradient(135deg, #f0f4ff 0%, #e8edf5 100%);
@@ -352,7 +347,6 @@
             object-fit: cover;
         }
 
-        /* ====== СЕКЦІЇ ====== */
         .section {
             padding: 80px 0;
         }
@@ -387,7 +381,6 @@
             background: #f8fafc;
         }
 
-        /* ====== ПРОБЛЕМА + РІШЕННЯ ====== */
         .problem-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -436,7 +429,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
         }
 
-        /* ====== НАШІ ПОСЛУГИ (НОВИЙ БЛОК) ====== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -489,7 +481,6 @@
             justify-content: center;
         }
 
-        /* ====== ЯК ПРОХОДИТЬ ПРОЦЕДУРА ====== */
         .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -535,7 +526,6 @@
             color: #64748b;
         }
 
-        /* ====== СКЛАД ПОСЛУГИ ====== */
         .composition-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -562,7 +552,6 @@
             color: #64748b;
         }
 
-        /* ====== ПЕРЕВАГИ ====== */
         .advantages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -599,121 +588,6 @@
             color: #64748b;
         }
 
-        /* ====== ТАРИФИ ====== */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            align-items: stretch;
-        }
-
-        .pricing-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pricing-card.popular {
-            border-color: #5b84d0;
-            box-shadow: 0 8px 40px rgba(91, 132, 208, 0.12);
-            position: relative;
-        }
-
-        .pricing-card.popular::before {
-            content: 'Рекомендуємо';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #5b84d0, #4a6fb8);
-            color: #fff;
-            padding: 4px 20px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .pricing-card .price {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #5b84d0;
-            margin: 16px 0;
-        }
-
-        .pricing-card .price span {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #94a3b8;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin: 20px 0 30px;
-            flex: 1;
-        }
-
-        .pricing-card ul li {
-            padding: 8px 0;
-            color: #475569;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .pricing-card ul li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-card ul li::before {
-            content: '✓ ';
-            color: #5b84d0;
-            font-weight: 700;
-        }
-
-        /* ====== ВІДГУКИ ====== */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-        }
-
-        .review-card {
-            background: #fff;
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-        }
-
-        .review-card .stars {
-            color: #f59e0b;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .review-card p {
-            color: #475569;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .review-card .author {
-            font-weight: 600;
-            color: #0f172a;
-            margin-top: 12px;
-            font-style: normal;
-        }
-
-        /* ====== FAQ (НОВИЙ АКОРДЕОН) ====== */
         .faq-list {
             max-width: 800px;
             margin: 0 auto;
@@ -772,7 +646,6 @@
             display: block;
         }
 
-        /* ====== ФОРМА ====== */
         .form-section {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: #fff;
@@ -838,7 +711,6 @@
             margin-top: 16px;
         }
 
-        /* ====== ФУТЕР ====== */
         .footer {
             background: #0f172a;
             color: #94a3b8;
@@ -874,7 +746,6 @@
             margin-top: 8px;
         }
 
-        /* ====== АДАПТИВНІСТЬ ====== */
         @media (max-width: 1024px) {
             .hero-content h1 {
                 font-size: 2.6rem;
@@ -976,12 +847,6 @@
                 grid-template-columns: 1fr 1fr;
             }
 
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
             .problem-text h2 {
                 font-size: 1.8rem;
             }
@@ -1009,14 +874,6 @@
                 font-size: 1rem;
                 min-height: 48px;
                 width: 100%;
-            }
-
-            .pricing-card {
-                padding: 30px 20px;
-            }
-
-            .pricing-card .price {
-                font-size: 2.2rem;
             }
 
             .form-group input {
@@ -1047,7 +904,6 @@
 </head>
 <body>
 
-    <!-- ====== ШАПКА ====== -->
     <header class="header" id="header">
         <div class="header-container">
             <a href="#" class="logo">Mobi<span>Medx</span></a>
@@ -1066,7 +922,6 @@
                     <li><a href="#about" onclick="closeMenu()">Про нас</a></li>
                     <li><a href="#process" onclick="closeMenu()">Процедура</a></li>
                     <li><a href="https://www.mobimedx.com/prices.html">Ціни</a></li>
-                    
                     <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
                     <li><a href="#contact" onclick="closeMenu()" class="nav-phone">+38 (073) 281 03 40</a></li>
                 </ul>
@@ -1079,8 +934,8 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Професійна підтримка <span class="highlight">з виїздом додому</span></h1>
-                    <p>Професійна підтримка вашого самопочуття з виїздом додому. Швидке відновлення енергії, водного балансу та загального тонусу після періодів підвищеного навантаження. Приїжджаємо протягом 45 хвилин.</p>
+                    <h1>Підтримка організму <span class="highlight">після насиченого відпочинку</span></h1>
+                    <p>Професійна допомога вдома. Швидке відновлення сил, водного балансу та ясності після веселих заходів, галасливих вечірок та періодів підвищеного навантаження. Допомагаємо зменшити дискомфорт, забрати тремор та позбутися важкості. Приїжджаємо протягом 45 хвилин.</p>
                     <div class="hero-buttons-container">
                         <div class="hero-buttons">
                             <a href="#contact" class="btn">Дізнатися більше</a>
@@ -1107,44 +962,44 @@
         </div>
     </section>
 
-    <!-- ====== НАШІ ПОСЛУГИ (НОВИЙ БЛОК) ====== -->
+    <!-- ====== НАШІ ПОСЛУГИ ====== -->
     <section class="section bg-light" id="services">
         <div class="container">
             <h2 class="section-title">Наші <span class="highlight">послуги</span></h2>
             <p class="section-subtitle">Основні напрямки роботи</p>
             <div class="services-grid">
-                <!-- Картка 1: Експрес-підтримка організму -->
+                <!-- Картка 1 -->
                 <div class="service-card">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
-                    <h4>Експрес-підтримка організму</h4>
-                    <p>Комплексна процедура для швидкого відновлення енергії та загального тонусу. Допомагає при виснаженні, втраті сил, порушенні концентрації. Підтримує природні процеси відновлення організму.</p>
+                    <h4>Для полегшення стану</h4>
+                    <p>Комплексна процедура для швидкого повернення до норми після активних заходів. Допомагає зменшити нудоту, забрати тремор, відновити ясність мислення та енергію. Підтримує природні процеси відновлення.</p>
                     <div class="price-tag">від 2 500 грн</div>
                     <a href="#contact" class="btn btn-sm">Детальніше</a>
                 </div>
 
-                <!-- Картка 2: Оздоровчий комплекс -->
+                <!-- Картка 2 -->
                 <div class="service-card">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-                    <h4>Оздоровчий комплекс</h4>
-                    <p>Спеціальна процедура з антиоксидантним комплексом для підтримки тонусу шкіри, покращення загального стану та природного сяйва.</p>
+                    <h4>Для покращення захисту організму</h4>
+                    <p>Спеціальна процедура з антиоксидантним комплексом для підтримки тонусу шкіри, зняття втоми та повернення свіжості після святкових днів.</p>
                     <div class="price-tag">від 1 800 грн</div>
                     <a href="#contact" class="btn btn-sm">Детальніше</a>
                 </div>
 
-                <!-- Картка 3: Енергетичний комплекс -->
+                <!-- Картка 3 -->
                 <div class="service-card">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-                    <h4>Енергетичний комплекс</h4>
-                    <p>Допомагає організму відновитися після періодів підвищеного навантаження. Сприяє виведенню продуктів метаболізму, повертає легкість та ясність.</p>
+                    <h4>Повернення енергії</h4>
+                    <p>Допомагає організму швидко відновитися після тривалих веселощів. Сприяє виведенню продуктів метаболізму, знімає тремор, повертає легкість, бадьорість та ясність.</p>
                     <div class="price-tag">від 3 000 грн</div>
                     <a href="#contact" class="btn btn-sm">Детальніше</a>
                 </div>
 
-                <!-- Картка 4: Антистрес-підтримка -->
+                <!-- Картка 4 -->
                 <div class="service-card">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                    <h4>Антистрес-підтримка</h4>
-                    <p>Підтримка нервової системи, зниження відчуття тривоги, нормалізація сну та серцевого ритму.</p>
+                    <h4>Заспокоєння та відновлення</h4>
+                    <p>Підтримка нервової системи після емоційних навантажень. Нормалізує сон, зменшує нудоту, знімає тривожність, допомагає розслабитися.</p>
                     <div class="price-tag">від 1 500 грн</div>
                     <a href="#contact" class="btn btn-sm">Детальніше</a>
                 </div>
@@ -1157,13 +1012,13 @@
         <div class="container">
             <div class="problem-grid">
                 <div class="problem-text">
-                    <h2>Турбота про <span class="highlight">ваше самопочуття</span></h2>
-                    <p>Сучасний ритм життя часто вимагає від нас максимальної віддачі. Наші процедури створені, щоб допомогти вам швидко відновити сили, підвищити працездатність та покращити якість життя.</p>
+                    <h2>Коли організм <span class="highlight">просить допомоги</span></h2>
+                    <p>Після активних вихідних, галасливих подій або періодів стресу організм часто потребує підтримки. Нудота, тремор, важкість та втрата енергії — сигнали, що час відновити баланс. Наші процедури допомагають швидко повернути сили та гарне самопочуття.</p>
                     <ul>
-                        <li>Відновлення природного балансу рідини в організмі</li>
-                        <li>Підтримка захисних функцій організму</li>
-                        <li>Зміцнення серцево-судинної системи</li>
-                        <li>Повернення ясності мислення та енергії</li>
+                        <li>Відновлення водного балансу</li>
+                        <li>Зменшення нудоти та дискомфорту</li>
+                        <li>Зняття тремору та напруги</li>
+                        <li>Повернення ясності та енергії</li>
                     </ul>
                 </div>
                 <div class="problem-image">
@@ -1238,6 +1093,14 @@
                     <h4>Антиоксиданти</h4>
                     <p>Підтримують захисні функції клітин</p>
                 </div>
+                <div class="composition-item">
+                    <h4>Комплекс для зняття тремору</h4>
+                    <p>Допомагає усунути тремор та відновити м'язовий тонус</p>
+                </div>
+                <div class="composition-item">
+                    <h4>Протинудотний компонент</h4>
+                    <p>Швидко зменшує нудоту та дискомфорт</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1278,15 +1141,13 @@
                     <h4>Індивідуальний підхід</h4>
                     <p>Склад розчину підбирається під ваш стан</p>
                 </div>
+                <div class="advantage-card">
+                    <h4>Знімаємо тремор та нудоту</h4>
+                    <p>Швидко позбавляємо від дискомфорту після вечірок та свят</p>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- ====== ТАРИФИ ====== -->
-    
-
-    
-    
 
     <!-- ====== FAQ ====== -->
     <section class="section bg-gray" id="faq">
@@ -1296,17 +1157,24 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
-                        <span>Як діють ваші процедури при сильному виснаженні?</span>
+                        <span>Чи допоможете ви зняти нудоту та тремор після вечірки?</span>
                         <span class="faq-icon">+</span>
                     </button>
-                    <div class="faq-answer">Наші методи допомагають швидко відновити енергію, підтримати природний баланс рідини, зміцнити серцево-судинну систему. Полегшення настає вже під час процедури.</div>
+                    <div class="faq-answer">Так, наші процедури спеціально розроблені для швидкого зменшення нудоти, зняття тремору та загального дискомфорту після активних заходів. Полегшення настає вже під час процедури.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
-                        <span>Що таке оздоровчий комплекс?</span>
+                        <span>Як швидко відновлюється самопочуття?</span>
                         <span class="faq-icon">+</span>
                     </button>
-                    <div class="faq-answer">Це спеціальна процедура з антиоксидантами, яка підтримує тонус шкіри, покращує загальний стан та додає природного сяйва.</div>
+                    <div class="faq-answer">Вже через 20-30 хвилин після початку процедури ви відчуєте значне полегшення: минає нудота, зникає тремор, повертається ясність мислення та енергія.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-btn" onclick="toggleFaq(this)">
+                        <span>Як діють ваші процедури при важкому ранці після свята?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">Наші методи допомагають швидко зняти нудоту, прибрати тремор, відновити водний баланс та повернути тонус. Ви забуваєте про дискомфорт вже через 30 хвилин.</div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-btn" onclick="toggleFaq(this)">
@@ -1340,7 +1208,6 @@
         </div>
     </section>
 
-    
     <!-- ====== BANNER ====== -->
     <section class="section" style="padding: 0;">
         <div class="container" style="max-width: 100%; padding: 0;">
@@ -1356,7 +1223,7 @@
             <div class="form-wrapper">
                 <form id="contactForm" onsubmit="submitForm(event)">
                     <div class="form-group">
-                        <label for="userName">Ваше ім’я</label>
+                        <label for="userName">Ваше ім'я</label>
                         <input type="text" id="userName" placeholder="Наприклад, Олександр" required />
                     </div>
                     <div class="form-group">
@@ -1367,7 +1234,7 @@
                     <p class="form-note">Ми зв'яжемося з вами найближчим часом. Конфіденційність гарантовано.</p>
                 </form>
                 <div id="formSuccess" style="display:none; margin-top: 20px; padding: 20px; background: #1e293b; border-radius: 12px; text-align:center; color: #5b84d0; font-weight:600;">
-                     Дякуємо! Ми зв'яжемося з вами найближчим часом.
+                    Дякуємо! Ми зв'яжемося з вами найближчим часом.
                 </div>
             </div>
         </div>
@@ -1376,11 +1243,11 @@
     <!-- ====== ФУТЕР ====== -->
     <footer class="footer">
         <div class="container">
-            <p><strong>MobiMedx</strong> — професійна підтримка самопочуття на дому: відновлення енергії, оздоровлення та гармонізація стану</p>
+            <p><strong>MobiMedx</strong> — професійна підтримка після свят та вечірок: зняття нудоти, тремору, відновлення енергії та гармонії</p>
             <p><a href="tel:+380732810340">+38 (073) 281 03 40</a> | <a href="mailto:info@mobimedx.com">info@mobimedx.com</a></p>
             <p><a href="https://t.me/mobimedx" target="_blank">Telegram</a></p>
             <p class="disclaimer">
-                Відмова від відповідальності: інформація на сайті не є медичною консультацією. Перед процедурою обов’язкова консультація з фахівцем.
+                Відмова від відповідальності: інформація на сайті не є медичною консультацією. Перед процедурою обов'язкова консультація з фахівцем.
                 Самолікування може бути небезпечним для життя. Всі матеріали мають інформаційний характер.
             </p>
             <p class="disclaimer" style="margin-top:4px;">
@@ -1420,11 +1287,9 @@
             const answer = btn.nextElementSibling;
             const icon = btn.querySelector('.faq-icon');
 
-            // Перемикаємо поточний елемент
             answer.classList.toggle('open');
             icon.classList.toggle('open');
 
-            // Змінюємо текст іконки
             if (icon.classList.contains('open')) {
                 icon.textContent = '−';
             } else {
@@ -1433,14 +1298,7 @@
         }
 
         // ====== ФОРМА ======
-        // ============================================================
-        // НАЛАШТУВАННЯ ТЕЛЕГРАМ-БОТА
-        // ============================================================
-        // Токен бота: AAHZy2qsU9XD-4Wtsq5tN-phJvJ_So4VnvM
-        // ВАЖЛИВО: вставте ВАШ ОСОБИСТИЙ CHAT_ID (отримайте через @userinfobot)
-        // ============================================================
-
-        const CHAT_ID = 'YOUR_CHAT_ID'; // ⬅️ ЗАМІНІТЬ НА ВАШ ОСОБИСТИЙ CHAT_ID
+        const CHAT_ID = '7974988414'; 
         const BOT_TOKEN = 'AAHZy2qsU9XD-4Wtsq5tN-phJvJ_So4VnvM';
         const URI_API = 'https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage';
 
@@ -1450,7 +1308,6 @@
             const name = document.getElementById('userName').value.trim();
             const phone = document.getElementById('userPhone').value.trim();
 
-            // Базова валідація
             if (!name || name.length < 2) {
                 alert('Будь ласка, введіть ваше ім\'я');
                 return;
@@ -1466,13 +1323,11 @@
             submitBtn.textContent = 'Відправляється...';
             submitBtn.disabled = true;
 
-            // Формуємо повідомлення
             const message = 'Нова заявка з сайту MobiMedx\n\n' +
                 'Ім\'я: ' + name + '\n' +
                 'Телефон: ' + phone + '\n\n' +
                 'Час заявки: ' + new Date().toLocaleString('uk-UA');
 
-            // Відправляємо в Telegram
             fetch(URI_API, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -1502,7 +1357,6 @@
                         alert("Сталася помилка при відправці заявки. Спробуйте пізніше.");
                     }
                 })
-                
                 .finally(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
