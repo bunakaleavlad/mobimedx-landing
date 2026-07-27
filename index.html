@@ -1299,71 +1299,64 @@
             icon.textContent = icon.classList.contains('open') ? '−' : '+';
         }
 
-        // ====== ФОРМА (ВИПРАВЛЕНО – GET-ЗАПИТ) ======
-        const CHAT_ID = '7974988414';
-        const BOT_TOKEN = 'AAHZy2qsU9XD-4Wtsq5tN-phJvJ_So4VnvM';
+        /function submitForm(event) {
+    event.preventDefault();
 
-        function submitForm(event) {
-            event.preventDefault();
+    const name = document.getElementById('userName').value.trim();
+    const phone = document.getElementById('userPhone').value.trim();
 
-            const name = document.getElementById('userName').value.trim();
-            const phone = document.getElementById('userPhone').value.trim();
+    if (!name || name.length < 2) {
+        alert('Будь ласка, введіть ваше ім\'я');
+        return;
+    }
+    if (!phone || phone.length < 10) {
+        alert('Будь ласка, введіть коректний номер телефону');
+        return;
+    }
 
-            if (!name || name.length < 2) {
-                alert('Будь ласка, введіть ваше ім\'я');
-                return;
-            }
-            if (!phone || phone.length < 10) {
-                alert('Будь ласка, введіть коректний номер телефону');
-                return;
-            }
+    const text = '📝 Нова заявка з сайту MobiMedx\n\n' +
+        '👤 Ім\'я: ' + name + '\n' +
+        '📱 Телефон: ' + phone + '\n\n' +
+        '🕒 Час: ' + new Date().toLocaleString('uk-UA');
 
-            const submitBtn = document.querySelector('#contactForm .btn');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Відправляється...';
-            submitBtn.disabled = true;
+    const BOT_TOKEN = '7974988414:AAFdwmr03nW31t1uHF7tVgclsvokDedzH8';
+    const CHAT_ID = '410783080'; // ✅ ваш особистий ID
 
-            const message = 'Нова заявка з сайту MobiMedx\n\n' +
-                'Ім\'я: ' + name + '\n' +
-                'Телефон: ' + phone + '\n\n' +
-                'Час заявки: ' + new Date().toLocaleString('uk-UA');
+    // iframe для обходу CORS
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_frame';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
 
-            // 🔥 ВИКОРИСТОВУЄМО GET – це обходить CORS
-            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}&parse_mode=HTML`;
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+    form.target = 'hidden_frame';
 
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.ok) {
-                        console.log('Успішно відправлено:', data);
-                        showSuccess();
-                    } else {
-                        throw new Error(data.description || 'Невідома помилка');
-                    }
-                })
-                .catch(error => {
-                    console.error('Помилка:', error);
-                    alert('❌ Не вдалося надіслати заявку. Перевірте консоль (F12) для деталей.');
-                })
-                .finally(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                });
-        }
+    const chatField = document.createElement('input');
+    chatField.type = 'hidden';
+    chatField.name = 'chat_id';
+    chatField.value = CHAT_ID;
+    form.appendChild(chatField);
 
-        function showSuccess() {
-            const form = document.getElementById('contactForm');
-            const success = document.getElementById('formSuccess');
-            if (form && success) {
-                form.style.display = 'none';
-                success.style.display = 'block';
-            }
-        }
+    const textField = document.createElement('input');
+    textField.type = 'hidden';
+    textField.name = 'text';
+    textField.value = text;
+    form.appendChild(textField);
+
+    document.body.appendChild(form);
+    form.submit();
+
+    // Показуємо повідомлення про успіх
+    showSuccess();
+
+    // Чистимо через 5 секунд
+    setTimeout(() => {
+        if (document.body.contains(form)) document.body.removeChild(form);
+        if (document.body.contains(iframe)) document.body.removeChild(iframe);
+    }, 5000);
+}
 
         // ====== ПЛАВНА ПРОКРУТКА ======
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
